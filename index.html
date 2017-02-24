@@ -16,13 +16,12 @@
 	<style type="text/css">
 		html {
 			background: url(./assets/images/bg1.jpg)
-			no-repeat center center fixed; 
+			no-repeat center center fixed;
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
 			background-size: cover;
 		}
-
 		img {
 		    	height: 250px;
 		    	width: 150px;
@@ -40,18 +39,11 @@
 			color:white;
 			font-size:15px;
 		}
-
-
 	</style>
 </head>
 <body>
 	<!-- CHARACTER SELECTION SECTION -->
 	<div class="row characters">
-				<!-- <img src="./assets/images/pic1.jpg" alt="characterss">
-				<img src="./assets/images/pic2.jpg" alt="characterss">
-				<img src="./assets/images/pic3.jpg" alt="characterss">
-				<img src="./assets/images/pic4.jpg" alt="characterss">
-				<img src="./assets/images/pic5.jpg" alt="characterss"> -->
 	</div>
 
 	<!-- SELECTED CHARACTER -->
@@ -71,10 +63,11 @@
 	</div>
 
 	<!-- FIGHT SECTION -->
-	<div class="row text" id="fight-section" > Fight Section</div>
-		<button class="btn attack-button"> Attack </button>
-		<p class="text enemy-health"> Enemy health: </p>
-		<p class="text your-health"> Your health: </p>
+	<div class="row text" id="fight-section">
+		<p>Fight Section</p>
+		<button class="btn attack-button"> Attack</button>
+		<p class="text">Enemy health: <span class="enemy-health"></span></p>
+		<p class="text">Your health: <span class="your-health"></span></p>
 	</div>
 
 
@@ -106,17 +99,5 @@
 	</div>
 
 	<script type="text/javascript" src="./assets/javascript/game.js"></script>
-
-	<!-- <script type="text/javascript">
-		var game = new Game();
-		var attackButton = document.getElementById('attack-button');
-
-		attackButton.addEventListener('click', function(evt) {
-			evt.preventDefault();
-			game.play();
-		});
-
-	</script> -->
-
-</body>	
+</body>
 </html>
