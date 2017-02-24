@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Michelle Dai</title>
+
+	<link rel="stylesheet" type="text/css" href="./skeleton/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="./skeleton/css/skeleton.css">
+
+	<link rel="stylesheet" href="./assets/css/style.css">
+
+	<script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+
+	<style type="text/css">
+		html {
+			background: url(./assets/images/bg1.jpg)
+			no-repeat center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+
+		img {
+		    	height: 250px;
+		    	width: 150px;
+		    	margin: 30px;
+		    }
+		.text {
+			color: white;
+			font-size: 30px;
+		}
+		#characters-section {
+			border:3px solid red;
+		}
+		.btn {
+			border: 2px solid white;
+			color:white;
+			font-size:15px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<!-- CHARACTER SELECTION SECTION -->
+	<div class="row characters">
+				<!-- <img src="./assets/images/pic1.jpg" alt="characterss">
+				<img src="./assets/images/pic2.jpg" alt="characterss">
+				<img src="./assets/images/pic3.jpg" alt="characterss">
+				<img src="./assets/images/pic4.jpg" alt="characterss">
+				<img src="./assets/images/pic5.jpg" alt="characterss"> -->
+	</div>
+
+	<!-- SELECTED CHARACTER -->
+	<div class="row selected-character-section">
+		<div class="text" id="selected-character"> Selected Character</div>
+	</div>
+
+	<!-- CHARACTERS AVAILIABLE FOR ATTACK -->
+	<div class="row available-to-attack-section">
+		<div class="ten colums"></div>
+		<div class="text"> Available for attack</div>
+	</div>
+
+	<!-- EMEMY SECTION -->
+	<div class="enemy">
+			<div class="text"> Enemy</div>
+	</div>
+
+	<!-- FIGHT SECTION -->
+	<div class="row text" id="fight-section" > Fight Section</div>
+		<button class="btn attack-button"> Attack </button>
+		<p class="text enemy-health"> Enemy health: </p>
+		<p class="text your-health"> Your health: </p>
+	</div>
+
+
+
+	<div class="swords" style="float:right">
+		  <div class="sword jedi">
+		    <div class="blade"></div>
+		    <div class="grip"></div>
+		  </div>
+		  <div class="sword samurai">
+		    <div class="blade"></div>
+		    <div class="guard"></div>
+		    <div class="grip"></div>
+		  </div>
+		  <div class="sword sith">
+		    <div class="blade"></div>
+		    <div class="grip"></div>
+		  </div>
+		  <div class="sword knight">
+		    <div class="blade"></div>
+		    <div class="guard"></div>
+		    <div class="grip"></div>
+		    <div class="knob"></div>
+		  </div>
+		  <div class="sword jedi green">
+		    <div class="blade"></div>
+		    <div class="grip"></div>
+		  </div>
+	</div>
+
+	<script type="text/javascript" src="./assets/javascript/game.js"></script>
+
+	<!-- <script type="text/javascript">
+		var game = new Game();
+		var attackButton = document.getElementById('attack-button');
+
+		attackButton.addEventListener('click', function(evt) {
+			evt.preventDefault();
+			game.play();
+		});
+
+	</script> -->
+
+</body>	
+</html>
