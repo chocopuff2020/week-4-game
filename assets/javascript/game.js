@@ -1,29 +1,29 @@
 var ALL_CHARACTERS = [{
-  name: "Tyrell",
+  name: "Ciri",
   hp: 100,
   attack: 10,
   counter: 10,
   imgFile: "pic1.jpg",
 }, {
-  name: "Cersei",
+  name: "Johnny",
   hp: 200,
   attack: 20,
   counter: 20,
   imgFile: "pic2.jpg",
 }, {
-  name: "Dragon",
+  name: "Ugliest Man Alive",
   hp: 300,
   attack: 30,
   counter: 30,
   imgFile: "pic3.jpg",
 }, {
-  name: "Sansa",
+  name: "Yennifer",
   hp: 400,
   attack: 40,
   counter: 40,
   imgFile: "pic4.jpg",
 }, {
-  name: "Jon",
+  name: "Gerald",
   hp: 500,
   attack: 50,
   counter: 50,
@@ -48,6 +48,9 @@ function Game() {
   this.mainCharacter = null;
   this.enemies = [];
   this.currentEnemy = null;
+
+  this.initializeAttack();
+  this.initializeReset();
 }
 
 Game.prototype.start = function() {
@@ -56,8 +59,6 @@ Game.prototype.start = function() {
     return new Character(Object.assign(stats, { onClick: that.onCharacterClick.bind(that) }));
   });
   this.allCharacters = characterList;
-  this.initializeAttack();
-
   this.flush();
 }
 
@@ -102,6 +103,8 @@ Game.prototype.flush = function() {
   if (this.mainCharacter) {
     mainCharacterContainer.appendChild(this.mainCharacter.element);
     yourHealth.textContent = this.mainCharacter.hp;
+  } else {
+    yourHealth.textContent = '-';
   }
 
   if (this.currentEnemy) {
@@ -119,6 +122,20 @@ Game.prototype.flush = function() {
     enemyListContainer.appendChild(enemy.element);
   });
 };
+
+Game.prototype.initializeReset = function () {
+  var that = this;
+  document
+    .querySelector('.reset-button')
+    .addEventListener('click', function(event) {
+      document.querySelectorAll('.img-responsive').forEach(e => e.remove());
+      that.allCharacters = [];
+      that.mainCharacter = null;
+      that.enemies = [];
+      that.currentEnemy = null;
+      that.start();
+    });
+}
 
 /*=====  End of Game  ======*/
 
