@@ -112,7 +112,6 @@ Game.prototype.flush = function() {
   }
 
   this.allCharacters.forEach(function(character) {
-
     characterContainer.appendChild(character.element);
   });
 
@@ -141,7 +140,7 @@ function Character(options) {
 Character.prototype.renderCharacter = function(options) {
   var img = document.createElement('img');
   img.src = this.imgPath;
-  img.className = 'img-responsive';
+  img.className = 'img-responsive img';
   img.addEventListener('click', (event) => {
     this.onClick(this);
   });
