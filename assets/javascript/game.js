@@ -165,6 +165,7 @@ Character.prototype.renderCharacter = function(options) {
 };
 
 Character.prototype.fight = function(defender) {
+  this.attack = this.attack + 10;
   defender.hp = defender.hp - this.attack;
 
   if (defender.hp < 1) {
